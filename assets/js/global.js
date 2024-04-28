@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateBannerCard(ipAddress) {
-    console.log(ipAddress);
     const ipAddressElement = document.getElementById("ipAddress");
     ipAddressElement.textContent = `${ipAddress}`;
   }
