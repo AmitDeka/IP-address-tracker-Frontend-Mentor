@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(map);
 
     const customIcon = L.icon({
-      iconUrl: "/images/icon-location.svg",
+      iconUrl:
+        "https://amitdeka.github.io/IP-address-tracker-Frontend-Mentor/images/icon-location.svg",
       iconSize: [45, 55],
     });
 
