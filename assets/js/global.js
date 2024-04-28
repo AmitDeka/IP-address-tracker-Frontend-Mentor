@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(map);
 
     const customIcon = L.icon({
-      iconUrl: "../../images/icon-location.svg",
+      iconUrl: "/images/icon-location.svg",
       iconSize: [45, 55],
     });
 
