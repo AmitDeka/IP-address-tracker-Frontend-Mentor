@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="./assets/style/leaflet.css" />
+    <script src="./assets/js/leaflet.js"></script>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="banner">
+        <div class="banner_bg">
+          <div class="container">
+            <h1 class="banner_title">IP Address Tracker</h1>
+            <div class="banner_searchBar">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for any IP address or domain" />
+              <button id="searchButton">
+                <img src="./images/icon-arrow.svg" alt="Arrow Icon" />
+              </button>
+            </div>
+            <div class="banner_card">
+              <div class="banner_card_small">
+                <h2>IP Address</h2>
+                <p id="ipAddress"></p>
+              </div>
+              <div class="banner_card_small">
+                <h2>Location</h2>
+                <p id="location"></p>
+              </div>
+              <div class="banner_card_small">
+                <h2>Timezone</h2>
+                <p>UTC <span id="timezone"></span></p>
+              </div>
+              <div class="banner_card_small">
+                <h2>ISP</h2>
+                <p id="isp"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map-container">
+        <div id="map" class="map"></div>
+      </section>
+    </main>
+
+    <div class="attribution" role="contentinfo">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/AmitDeka" target="_blank">Amit Deka</a>.
+    </div>
+
+    <script src="./assets/js/global.js"></script>
+  </body>
+</html>

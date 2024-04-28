@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400,500,700&display=swap");
+@import "./breakpoints";
+
+$Very_Dark_Gray: hsl(0, 0%, 17%);
+$Dark_Gray: hsl(0, 0%, 59%);
+$White: hsl(0, 0%, 100%);
+$ff: "Rubik", sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: $Very_Dark_Gray;
+  font-family: $ff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 325px;
+  width: 100%;
+  @include breakpoint(xl) {
+    max-width: 1110px;
+  }
+}
+
+.banner {
+  height: 300px;
+  z-index: 2;
+  @include breakpoint(md) {
+    height: 280px;
+  }
+
+  &_bg {
+    background-image: url("../../images/pattern-bg-mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 25px 0 0;
+    @include breakpoint(md) {
+      background-image: url("../../images/pattern-bg-desktop.png");
+      padding: 30px 0 0;
+      padding: 28px 0 0;
+    }
+  }
+
+  &_title {
+    color: $White;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    @include breakpoint(xl) {
+      font-size: 1.9rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  &_searchBar {
+    margin: 0 auto;
+    position: relative;
+    width: 325px;
+    input {
+      border: 0;
+      border-radius: 10px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      outline: 0;
+      padding: 18px 25px;
+      width: 100%;
+      @include breakpoint(md) {
+        border-radius: 16px;
+        padding: 18px 22px;
+      }
+    }
+    button {
+      background-color: $Very_Dark_Gray;
+      border: 0;
+      border-radius: 0 10px 10px 0;
+      bottom: 0;
+      cursor: pointer;
+      outline: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      &:hover,
+      &:focus {
+        background-color: rgba($Very_Dark_Gray, 0.9);
+      }
+      @include breakpoint(md) {
+        border-radius: 0 16px 16px 0;
+        width: 60px;
+      }
+    }
+    @include breakpoint(md) {
+      width: 555px;
+    }
+  }
+
+  &_card {
+    background-color: $White;
+    border-radius: 10px;
+    color: $Very_Dark_Gray;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 25px 0;
+    padding: 25px;
+    position: relative;
+    z-index: 1000;
+    &_small {
+      width: 100%;
+      h2 {
+        color: $Dark_Gray;
+        font-size: 0.725rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        text-align: center;
+        text-transform: uppercase;
+        @include breakpoint(xl) {
+          font-size: 0.875rem;
+          text-align: start;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+        @include breakpoint(xl) {
+          font-size: 1.6rem;
+          line-height: 1.2;
+          margin-top: 12px;
+          text-align: start;
+        }
+      }
+      &:last-of-type {
+        border: 0;
+      }
+      @include breakpoint(xl) {
+        border-right: 1px solid rgba($Dark_Gray, 0.5);
+        padding: 5px 30px;
+      }
+    }
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 30px 0;
+    }
+    @include breakpoint(xl) {
+      grid-template-columns: repeat(4, 1fr);
+      margin: 50px 0;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+.map-container {
+  height: calc(100vh - 300px);
+  width: 100%;
+  z-index: 1;
+  @include breakpoint(md) {
+    height: calc(100vh - 280px);
+  }
+  .map {
+    height: 100%;
+    width: 100%;
+  }
+}
